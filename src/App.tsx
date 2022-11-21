@@ -1,12 +1,10 @@
-import reactLogo from './assets/react.svg'
 import './App.css'
+import { LoginPage } from './pages/Login'
 
 function App() {
 
   return (
-    <div className="App">
-      Hello World
-    </div>
+      <LoginPage />
   )
 }
 
