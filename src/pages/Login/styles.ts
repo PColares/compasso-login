@@ -13,9 +13,35 @@ export const Container = styled.div`
 export const LeftContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   width: 50vw;
+
+  @media (max-width: 768px) {
+    width: 100vw;
+    align-items: center;
+    
+  }
+`;
+
+export const TitleWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  /* margin-left: -95px;
+  margin-bottom: 135px; */
+
+  @media (max-width: 768px) {
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+`;
+
+export const InputWrapper = styled.div`
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  /* margin-bottom: 208px;
+  margin-top: 25px; */
 `;
 
 export const Input = styled.input`
@@ -25,7 +51,7 @@ export const Input = styled.input`
   width: 379px;
   height: 60px;
   padding-left: 20px;
-  
+
   font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
@@ -83,6 +109,10 @@ export const RightContainer = styled.div`
   width: 50vw;
   display: flex;
   justify-content: center;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const Image = styled.img`
@@ -94,4 +124,8 @@ export const Logo = styled.img`
   position: absolute;
   width: 349px;
   height: 94px;
+
+  @media (max-width: 768px) {
+    position: relative;
+  }
 `;

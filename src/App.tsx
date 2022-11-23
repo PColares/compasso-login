@@ -1,11 +1,12 @@
-import './App.css'
-import { LoginPage } from './pages/Login'
+import React, {useContext, useEffect} from 'react'
+import PrivateRoutes from "./routes/private.routes";
+import PublicRoutes from "./routes/public.routes";
+import { AuthContext } from './context/AuthContext';
+import "./App.css";
 
 function App() {
-
-  return (
-      <LoginPage />
-  )
+  const {auth} = useContext(AuthContext)
+  return auth ? <PrivateRoutes /> : <PublicRoutes />;
 }
 
-export default App
+export default App;
