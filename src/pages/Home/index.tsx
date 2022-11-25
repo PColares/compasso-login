@@ -10,13 +10,35 @@ import {
   SecondsWrapper,
   UolBall,
   BodyTextWrapper,
+  Logo,
+  MiddleWrapper,
+  HeaderRight,
+  HeaderRightChild,
 } from "./styles";
 import uolBall from "../../assets/uol-ball.png";
+import logoBlack from "../../assets/logo-black.png";
+import cloud from "../../assets/cloud.png";
+import useWindowSize from "../../hooks/useWindowSize";
 
 export function HomePage() {
+  const { width } = useWindowSize();
+
   return (
     <Container>
-      <h1>Home</h1>
+      <header>
+        <Logo src={logoBlack} alt="" />
+        <MiddleWrapper>
+          <span>11:26</span>
+          <p>terça-feira, 17 de março de 2020</p>
+        </MiddleWrapper>
+        <HeaderRight>
+          <span>Passo Fundo - RS</span>
+          <HeaderRightChild>
+            <img src={cloud} alt="" />
+            <span>22º</span>
+          </HeaderRightChild>
+        </HeaderRight>
+      </header>
       <body>
         <UolBall src={uolBall} alt="" />
         <BodyTextWrapper>
@@ -32,19 +54,23 @@ export function HomePage() {
       </body>
       <FooterWrapper>
         <Footer>
-          <h1>
-            Essa janela do navegador é usada para manter sua sessão de
-            autenticação ativa. Deixe-a aberta em segundo plano e abra uma nova
-            janela para continuar a navegar.
-          </h1>
-          <Divider />
-          <RefreshWrapper>
-            <span>Application refresh in</span>
-            <SecondsWrapper>
-              <span>600</span>
-              <small>seconds</small>
-            </SecondsWrapper>
-          </RefreshWrapper>
+          {width > 768 && (
+            <>
+              <h1>
+                Essa janela do navegador é usada para manter sua sessão de
+                autenticação ativa. Deixe-a aberta em segundo plano e abra uma
+                nova janela para continuar a navegar.
+              </h1>
+              <Divider />
+              <RefreshWrapper>
+                <span>Application refresh in</span>
+                <SecondsWrapper>
+                  <span>600</span>
+                  <small>seconds</small>
+                </SecondsWrapper>
+              </RefreshWrapper>
+            </>
+          )}
           <SearchButton>
             <span>Acessar Busca</span>
           </SearchButton>

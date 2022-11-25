@@ -1,10 +1,85 @@
 import styled from "styled-components";
 
-export const Container = styled.div``;
+export const Container = styled.div`
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 1rem;
+  }
+`;
+export const MiddleWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+
+  span {
+    margin-top: 5rem;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 144px;
+    text-align: center;
+
+    color: #222222;
+  }
+
+  p {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+
+    color: #222222;
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
+
+export const HeaderRight = styled.div`
+  span {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #222222;
+  }
+`;
+
+export const HeaderRightChild = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 1rem;
+  margin-right: 2.5rem;
+
+  img {
+    width: 34px;
+    height: 34px;
+  }
+
+  span {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 72px;
+    color: #222222;
+  }
+`;
+
+export const Logo = styled.img`
+  width: 300px;
+  height: 84px;
+`;
 
 export const BodyTextWrapper = styled.div`
   margin-right: 8rem;
-  margin-top: 12rem;
+  margin-top: 4rem;
   h1 {
     margin: 0;
     font-family: "Poppins";
@@ -37,12 +112,16 @@ export const BodyTextWrapper = styled.div`
     line-height: 54px;
     color: #c12d18;
   }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const UolBall = styled.img`
   position: absolute;
-  width: 800px;
-  height: 800px;
+  width: 750px;
+  height: 750px;
   left: -5rem;
   bottom: 0;
   z-index: -1;
@@ -60,9 +139,9 @@ export const Footer = styled.div`
   height: 100px;
   z-index: 100;
   bottom: 0;
+  justify-content: flex-end;
   position: absolute;
   background: linear-gradient(90.16deg, #33383d 0%, #1c1d20 100%);
-  justify-content: flex-end;
 
   h1 {
     display: flex;
@@ -74,6 +153,10 @@ export const Footer = styled.div`
     font-size: 12px;
     line-height: 18px;
     text-align: right;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: row-reverse;
   }
 `;
 
@@ -162,5 +245,8 @@ export const SearchButton = styled(LogoutButton)`
     text-align: center;
 
     color: #c13216;
+  }
+  @media (max-width: 768px) {
+    width: 100%;
   }
 `;
