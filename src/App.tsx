@@ -1,12 +1,9 @@
 import React, {useContext, useEffect} from 'react'
-import PrivateRoutes from "./routes/private.routes";
-import PublicRoutes from "./routes/public.routes";
-import { AuthContext } from './context/AuthContext';
 import "./App.css";
+import { AppRoutes } from './pages/routes/routes';
 
 function App() {
-  const {auth} = useContext(AuthContext)
-  return auth ? <PrivateRoutes /> : <PublicRoutes />;
+  return <AppRoutes />;
 }
 
 export default App;

@@ -20,18 +20,40 @@ export const LeftContainer = styled.div`
   @media (max-width: 768px) {
     width: 100vw;
     align-items: center;
-    
   }
+`;
+
+export const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+`;
+
+export const ErrorWrapper = styled.div`
+  width: 283px;
+  height: 48px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+
+  color: #e9b425;
+`;
+
+export const Svg = styled.img`
+  z-index: 100;
+  width: 30px;
+  height: 30px;
 `;
 
 export const TitleWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  /* margin-left: -95px;
-  margin-bottom: 135px; */
+  margin-left: -95px;
 
   @media (max-width: 768px) {
-    margin-left: 0;
     margin-bottom: 0;
   }
 `;
@@ -45,7 +67,7 @@ export const InputWrapper = styled.div`
 `;
 
 export const Input = styled.input`
-  background: #26292c;
+  background-color: transparent;
   border: 1px solid #ffffff;
   border-radius: 50px;
   width: 379px;
