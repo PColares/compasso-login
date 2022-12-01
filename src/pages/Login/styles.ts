@@ -129,7 +129,6 @@ export const Subtitle = styled.div`
 export const RightContainer = styled.div`
   display: flex;
   width: 50vw;
-  display: flex;
   justify-content: center;
 
   @media (max-width: 768px) {

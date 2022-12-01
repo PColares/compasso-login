@@ -71,6 +71,10 @@ export function HomePage() {
     navigate("/");
   };
 
+  const handleRedirect = () => {
+    navigate("/github");
+  };
+
   const fetchData = async () => {
     await fetch(
       // @ts-ignore
@@ -158,7 +162,7 @@ export function HomePage() {
               </RefreshWrapper>
             </>
           )}
-          <SearchButton>
+          <SearchButton onClick={handleRedirect}>
             <span>Acessar Busca</span>
           </SearchButton>
           <LogoutButton onClick={handleLogout}>logout</LogoutButton>

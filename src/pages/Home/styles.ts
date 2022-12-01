@@ -12,10 +12,8 @@ export const MiddleWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 2rem;
 
   span {
-    margin-top: 5rem;
     font-family: "Poppins";
     font-style: normal;
     font-weight: 700;

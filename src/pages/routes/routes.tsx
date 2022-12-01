@@ -1,16 +1,16 @@
 import React from "react";
-import { Route, BrowserRouter, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
 import { LoginPage } from "../Login";
 import { HomePage } from "../Home";
+import { GithubPage } from "../GithubPage";
 
 export const AppRoutes = () => {
   return (
-    <BrowserRouter>
-        <Routes>
-            <Route path="/" element={<LoginPage/>}/>
-            <Route path="/home" element={<HomePage />}/>
-      </Routes>
-    </BrowserRouter>
+    <Routes>
+      <Route path="/" element={<LoginPage />} />
+      <Route path="/home" element={<HomePage />} />
+      <Route path="/github" element={<GithubPage />} />
+    </Routes>
   );
 };
