@@ -191,6 +191,7 @@ export const SecondsWrapper = styled.div`
   justify-content: center;
   align-items: center;
   height: 100px;
+  width: 100px;
 
   span {
     font-family: "Poppins";

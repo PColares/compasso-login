@@ -20,6 +20,7 @@ import logoBlack from "../../assets/logo-black.png";
 import cloud from "../../assets/cloud.png";
 import useWindowSize from "../../hooks/useWindowSize";
 import { useNavigate } from "react-router-dom";
+import { useLocalState } from "../utils/useLocalStorage";
 
 export function HomePage() {
   // @ts-ignore
@@ -68,7 +69,8 @@ export function HomePage() {
     date.getFullYear();
 
   const handleLogout = () => {
-    navigate("/");
+    localStorage.clear();
+    navigate("/login");
   };
 
   const handleRedirect = () => {
@@ -105,6 +107,8 @@ export function HomePage() {
   }, [counter]);
 
   useEffect(() => {}, [counter]);
+
+  useEffect(() => { document.title = "Compass - Home"}, [])
 
   return (
     <Container>

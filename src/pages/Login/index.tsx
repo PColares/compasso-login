@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import {
   Container,
   Image,
@@ -21,10 +21,11 @@ import logo from "../../assets/logo.png";
 import iconUser from "../../assets/icon-user.svg";
 import useWindowSize from "../../hooks/useWindowSize";
 import { useNavigate } from "react-router-dom";
+import { useLocalState } from "../utils/useLocalStorage";
 
 export function LoginPage() {
   const { width } = useWindowSize();
-  const [form, setForm] = useState({ user: "", password: "" });
+  const [form, setForm] = useLocalState("", "usuario e senha");
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
@@ -40,6 +41,8 @@ export function LoginPage() {
   const handleChange = (e: { target: { name: any; value: any } }) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
+  
+  useEffect(() => { document.title = "Compass - Login"}, [])
 
   return (
     <Container>

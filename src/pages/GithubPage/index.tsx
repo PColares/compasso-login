@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Container,
   ProfileComponent,
@@ -14,8 +14,12 @@ import {
 import UolBall from "../../assets/uol-ball.png";
 import backgroundImg from "../../assets/image.jpg";
 import logo from "../../assets/logo.png";
+import psy from "../../assets/psy.jpg";
 
 export function GithubPage() {
+  
+  useEffect(() => { document.title = "Compass - Github"}, [])
+
   return (
     <Container>
       <LeftContainer>
@@ -27,7 +31,7 @@ export function GithubPage() {
         </SearchInput>
         <ProfileComponent>
           <ProfileContainer>
-            <Img src={UolBall} alt="github profile" />
+            <Img src={psy} alt="github profile" />
             <Info>
               <h3>Nome</h3>
               <p>Descrição</p>
@@ -37,7 +41,7 @@ export function GithubPage() {
         </ProfileComponent>
         <ProfileComponent>
           <ProfileContainer>
-            <Img src={UolBall} alt="github profile" />
+            <Img src={psy} alt="github profile" />
             <Info>
               <h3>Nome</h3>
               <p>Descrição</p>
@@ -47,7 +51,7 @@ export function GithubPage() {
         </ProfileComponent>
         <ProfileComponent>
           <ProfileContainer>
-            <Img src={UolBall} alt="github profile" />
+            <Img src={psy} alt="github profile" />
             <Info>
               <h3>Nome</h3>
               <p>Descrição</p>
